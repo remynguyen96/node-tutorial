@@ -1,0 +1,5 @@
+/node_modules
+/src/assets/images
+/src/assets/favicon.ico
+.env
+package-lock.json

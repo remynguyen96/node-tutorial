@@ -1,0 +1,25 @@
+<div class="fixed-action-btn horizontal">
+  <a class="btn-floating btn-large pulse" [routerLink]="['create']" >
+      <i class="material-icons">create</i>
+    </a>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col m4" *ngFor="let blog of blogs">
+      <mz-card [backgroundClass]="'blue-grey darken-1'" [textClass]="'white-text'" [hoverable]="true">
+        <mz-card-title>
+          {{blog.title}}
+        </mz-card-title>
+        <mz-card-content>
+          <p>{{blog.description}}</p>
+          <img src="{{urlImage}}/{{blog.images}}" alt="{{blog.title}}" style="width:250px;height:250px">
+        </mz-card-content>
+        <mz-card-action>
+          <a href="{{blog.slug}}">View Detail</a>
+          <a href="{{blog.slug}}">Author - {{blog.author}}</a>
+        </mz-card-action>
+      </mz-card>
+    </div>
+  </div>
+</div>

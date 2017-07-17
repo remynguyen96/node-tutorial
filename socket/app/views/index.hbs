@@ -1,0 +1,26 @@
+<div class="col-sm-8 col-sm-offset-2">
+  <div class="maincontent">
+    <article class="article">
+      <h2 class="article-title">Who are we?</h2>
+      <div class="jumbotron"></div>
+      <button type="button" class="btn btn-success">Send Message</button>
+    </article>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+  // var socket = io();
+  var socket = io('http://localhost:4444');
+  // socket.on('connect',()=>{
+    socket.on('messages',(data)=>{
+      $(".jumbotron").append(data)
+    });
+
+    $("button").on('click',()=>{
+      let data = 'Hello guy !!!'
+      socket.emit('sendData',data);
+    });
+  // });
+
+});
+</script>

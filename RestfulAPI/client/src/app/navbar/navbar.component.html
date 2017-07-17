@@ -1,0 +1,32 @@
+<div class="row">
+  <nav>
+      <div class="nav-wrapper">
+        <a [routerLink]="['/']" class="brand-logo">Homepage</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a [routerLink]="['login']">Sign In</a></li>
+          <li><a [routerLink]="['sign-up']">Sign Up</a></li>
+          <li><a [routerLink]="['animation']">Animation</a></li>
+          <li><a [routerLink]="['advertise']">Advertise</a></li>
+          <li><a [routerLink]="['youtube']">Youtube</a></li>
+          <li><a [routerLink]="['blogs']">Blogs</a></li>
+          <li><a [routerLink]="['categories']">Categories</a></li>
+          <li><a [routerLink]="['profile']">Profile</a></li>
+          <li><a [routerLink]="['upload-file']">Upload File</a></li>
+
+          <!-- <li *ngIf="!globalService.isAuthenticated"><a [routerLink]="['login']">Sign In</a></li>
+          <li *ngIf="!globalService.isAuthenticated"><a [routerLink]="['sign-up']">Sign Up</a></li>
+          <li *ngIf="globalService.isAuthenticated"><a [routerLink]="['animation']">Animation</a></li>
+          <li *ngIf="globalService.isAuthenticated"><a [routerLink]="['advertise']">Advertise</a></li>
+          <li *ngIf="globalService.isAuthenticated"><a [routerLink]="['youtube']">Youtube</a></li>
+          <li *ngIf="globalService.isAuthenticated"><a [routerLink]="['blogs']">Blogs</a></li>
+          <li *ngIf="globalService.isAuthenticated"><a [routerLink]="['categories']">Categories</a></li>
+          <li *ngIf="globalService.isAuthenticated"><a [routerLink]="['profile']">Profile</a></li>
+          <li *ngIf="globalService.isAuthenticated"><a [routerLink]="['upload-file']">Upload File</a></li> -->
+
+
+
+          <li *ngIf="globalService.isAuthenticated"><a href="#Logout" (click)="logout($event)">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+</div>

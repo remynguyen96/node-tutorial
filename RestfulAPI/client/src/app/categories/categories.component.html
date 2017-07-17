@@ -1,0 +1,23 @@
+<div class="fixed-action-btn horizontal">
+  <a class="btn-floating btn-large pulse red" [routerLink]="['create']">
+      <i class="material-icons">create</i>
+    </a>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col m4" *ngFor="let category of categories">
+      <mz-card [backgroundClass]="'blue-grey darken-1'" [textClass]="'white-text'" [hoverable]="true">
+        <mz-card-title>
+          {{category.title}}
+        </mz-card-title>
+        <mz-card-content>
+          <img src="{{urlImage}}/{{category.images}}" alt="{{category.title}}" style="width:250px;height:250px">
+        </mz-card-content>
+        <mz-card-action>
+          <a href="{{category.slug}}">View Detail</a>
+        </mz-card-action>
+      </mz-card>
+    </div>
+  </div>
+</div>
+

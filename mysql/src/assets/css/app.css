@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+.page-content {
+  flex: 1 0 auto; }
+
+.page-footer {
+  padding-top: 0px;
+  background: #34495e; }
+
+.nav-wrapper {
+  background: #1abc9c; }
+
+.notiFly {
+  font-weight: 500;
+  text-transform: capitalize; }
+  .notiFly .errors {
+    color: #ff3c3c; }
+  .notiFly .success {
+    color: #2ecc71; }

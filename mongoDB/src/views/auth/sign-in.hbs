@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col m12">
+      <h4 class="center-align red-text text-accent-4">Sign In</h4>
+      {{#if hasErrors}}
+      <div class="row">
+        <div class="col m6 offset-m3">
+          <ul class="collection">
+            {{#each messages}}
+              <li class="collection-item red white-text">{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      {{/if}}
+      <form id="form_Signin" action="/auth/sign-in" method="post">
+        <div class="col m6 offset-m3 input-field">
+          <input type="text" name="email" id="email" value="{{oldEmail}}" autocomplete="off">
+          <label for="email">Email</label>
+        </div>
+        <div class="col m6 offset-m3 input-field">
+          <input type="password" name="password" id="password" autocomplete="off">
+          <label for="password">Password</label>
+        </div>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <div class="col m12 center-align">
+          <button type="submit" class="red accent-4 btn waves-effect waves-light">Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

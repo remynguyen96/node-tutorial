@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col m12">
+      <h4 class="center-align green-text text-accent-4">Sign up</h4>
+      {{#if hasErrors}}
+      <div class="row">
+        <div class="col m6 offset-m3">
+          <ul class="collection">
+            {{#each messages}}
+              <li class="collection-item red white-text">{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      {{/if}}
+      <form action="/auth/sign-up" method="post">
+        <div class="col m6 offset-m3 input-field">
+          <input type="text" name="name" id="name" value="{{old.name}}" autocomplete="off">
+          <label for="name">Name</label>
+        </div>
+        <div class="col m6 offset-m3 input-field">
+          <input type="text" name="email" id="email" value="{{old.email}}" autocomplete="off">
+          <label for="email">Email</label>
+        </div>
+        <div class="col m6 offset-m3 input-field">
+          <input type="password" name="password" id="password" autocomplete="off">
+          <label for="password">Password</label>
+        </div>
+        <div class="col m6 offset-m3 input-field">
+          <input type="password" name="confirmPassword" id="confirmPassword" autocomplete="off">
+          <label for="confirmPassword">Password Confirm</label>
+        </div>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <div class="col m12 center-align">
+          <button type="submit" class="green accent-4 btn waves-effect waves-light">Sign Up</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

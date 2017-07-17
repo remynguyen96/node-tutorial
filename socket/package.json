@@ -1,0 +1,29 @@
+{
+  "name": "socketio",
+  "version": "1.0.0",
+  "description": "This is demo about SocketIO in node js",
+  "main": "app/app.js",
+  "scripts": {
+    "dev": "nodemon -e css,hbs,js,json --watch app --ignore feedback.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "javascript"
+  },
+  "author": "Remy Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "body-parser": "*",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "hbs": "^4.0.1",
+    "morgan": "^1.8.1",
+    "mysql": "^2.13.0",
+    "nodemon": "^1.11.0",
+    "reload": "^1.1.5",
+    "socket.io": "*"
+  }
+}

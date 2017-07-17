@@ -1,0 +1,80 @@
+<div *ngIf="loading" class="red darken-2 progress" style="margin-top: -20px;">
+  <div class="red lighten-4 indeterminate"></div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col m12 center-align">
+      <button class="red btn waves-effect waves-light" [@flyinOut]="'in'">Part 1</button>
+      <section class="section"></section>
+      <button class="blue btn waves-effect waves-light" [@shrinkOut]="'in'">Part 2</button>
+      <section class="section"></section>
+      <button class="green btn waves-effect waves-light" [@flyInOut2]="'in'">Part 3</button>
+    </div>
+
+    <!--<app-part1
+  [elementId]="'my-editor-id'"
+  (onEditorKeyup)="keyupHandlerFunction($event)"
+  >
+</app-part1>-->
+    <div class="col m12">
+      <form #infomation="ngForm" (ngSubmit)="sendMail(infomation.value)">
+        <div class="col m8 offset-m2 input-field">
+          <input type="email" required  id="email" name="email" [(ngModel)]="dataMail.email" #email="ngModel">
+          <label for="email">Email</label>
+        </div>
+
+        <div class="col m8 offset-m2 input-field">
+          <input type="text" required minlength="4" maxlength="60" id="subject" name="subject" [(ngModel)]="dataMail.subject" #subject="ngModel">
+          <label for="subject">Subject</label>
+        </div>
+
+        <div *ngIf="subject.errors && (subject.dirty || subject.touched)" class="col m10 center-align red white-text">
+            <div [hidden]="!subject.errors.required">
+              Subject is required
+            </div>
+            <div [hidden]="!subject.errors.minlength">
+              Subject must be at least 4 characters long.
+            </div>
+            <div [hidden]="!subject.errors.maxlength">
+              Subject cannot be more than 60 characters long.
+            </div>
+        </div>
+
+        <div class="col m12">
+          <textarea id="Email" required name="content" [(ngModel)]="dataMail.content" #content="ngModel"></textarea>
+        </div>
+
+        <div *ngIf="content.errors" class="col m12 center-align red white-text">
+            <div [hidden]="!content.errors">
+              Content is required
+            </div>
+        </div>
+
+        <div class="col m12 center-align">
+          <button type="submit" [disabled]="!infomation.valid" class="btn waves-effect waves-light">Send Mail</button>
+        </div>
+
+
+      </form>
+
+
+
+    <!--<div class="col m12">
+      <form [formGroup]="dataMail" (ngSubmit)="sendMail(dataMail.value)">
+        <div class="col m8 offset-m2 input-field">
+          <input type="text" id="subject" formControlName="subject">
+          <label for="subject">Subject</label>
+        </div>
+        <div class="col m12">
+          <textarea id="Email" formControlName="content"></textarea>
+        </div>
+        <div class="col m12 center-align">
+          <button type="submit" [disabled]="!dataMail.valid" class="btn waves-effect waves-light">Send Mail</button>
+        </div>
+      </form>-->
+
+
+    </div>
+  </div>
+</div>
+
