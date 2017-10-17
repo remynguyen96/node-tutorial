@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="collection">
+    <li class="collection-item" *ngFor="let item of Allmessage">
+        {{item}}
+    </li>
+  </div>
+</div>
+<div class="input-field">
+  <input type="text" name="message" id="message" #message>
+  <label for="message">message</label>
+</div>
+<button type="button" class="btn waves-light waves-effect" (click)="sendMessage(message.value);message.value = ''">Send from detail message</button>

@@ -1,0 +1,28 @@
+{
+  "customers": [
+    {
+      "id": "1",
+      "name": "Remy Nguyen",
+      "email": "remynguyen@gmail.com",
+      "age": 20
+    },
+    {
+      "id": "2",
+      "name": "Remy Nguyen 2",
+      "email": "remynguyen2@gmail.com",
+      "age": 21
+    },
+    {
+      "id": "3",
+      "name": "Remy Nguyen 3",
+      "email": "remynguyen3@gmail.com",
+      "age": 22
+    },
+    {
+      "name": "Hey boy",
+      "email": "goodjob@gmail.com",
+      "age": 24,
+      "id": "H13lSB2DW"
+    }
+  ]
+}

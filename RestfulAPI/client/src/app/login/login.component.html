@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <form [formGroup]="infomationLogin" (ngSubmit)="login(infomationLogin.value)">
+      <div class="col m6 offset-m3 input-field">
+        <input type="text" formControlName="email" id="email">
+        <label for="email">Email</label>
+      </div>
+      <div class="col m6 offset-m3 input-field">
+        <input type="password" formControlName="password" id="password">
+        <label for="password">Password</label>
+      </div>
+      <div class="col m12 center-align">
+        <button type="submit" [disabled]="!infomationLogin.valid" class="green accent-3 btn waves-effect waves-light">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

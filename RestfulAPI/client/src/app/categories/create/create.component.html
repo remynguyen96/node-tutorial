@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col m8 offset-m2">
+      <form [formGroup]="infomation" (ngSubmit)="addCategory(infomation.value)">
+
+        <mz-input-container class="col m12">
+          <i mz-icon mz-input-prefix [icon]="'arrow_forward'">
+          </i>
+          <input type="text" mz-input [label]="'Title'" id="Title" formControlName="title" (keyup)="convertTitle(infomation.get('title').value)">
+        </mz-input-container>
+
+        <mz-input-container class="col m12">
+          <i mz-icon mz-input-prefix [icon]="'arrow_forward'">
+          </i>
+          <input type="text" mz-input [label]="'Slug'" id="Slug" formControlName="slug" value="{{slug}}">
+        </mz-input-container>
+
+
+        <div class="col m12 file-field input-field">
+          <div class="btn">
+            <span>Images</span>
+            <input type="file" formControlName="images">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path" type="text">
+          </div>
+        </div>
+
+        <div class="col m12 center-align">
+          <button type="submit" [disabled]="!infomation.valid" class="btn waves-effect waves-light">
+            Create Category
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

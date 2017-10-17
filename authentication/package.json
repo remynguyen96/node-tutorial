@@ -1,0 +1,33 @@
+{
+  "name": "AuthenticationNodejs",
+  "version": "1.0.0",
+  "description": "Not things",
+  "main": "app.js",
+  "author": "Remy Nguyen",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/app.js"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "cross-env": "^5.0.5",
+    "express": "^4.15.5",
+    "jsonwebtoken": "^8.0.1",
+    "mongoose": "^4.11.13",
+    "mongoose-unique-validator": "^1.0.6",
+    "multer": "^1.3.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0",
+    "passport-local": "^1.0.0",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.12.1"
+  }
+}

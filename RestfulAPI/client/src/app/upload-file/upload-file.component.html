@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col m6 offset-m3">
+      <form id="formUpload" [formGroup]="formFile" (ngSubmit)="uploadFile(formFile.value)">
+        <div class="file-field input-field">
+          <div class="btn">
+            <span>File</span>
+            <input type="file" formControlName="file" (change)="showImage($event)">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+        <input type="text" formControlName="name">
+        <div class="col m12">
+          <img [src]="imageURL" class="responsive-img">
+        </div>
+        <section class="section"></section>
+        <div class="col m12 center-align">
+          <button mz-button type="submit" [disabled]="!formFile.valid">
+            Upload Images
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

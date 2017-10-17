@@ -1,0 +1,9 @@
+.psd {
+    /*background: #53246a;*/
+    width: 1240px;
+    height: 1754px;
+    margin: 0 auto;
+    position: relative;
+    background: url('../images/background.jpg') center center no-repeat;
+    background-size: cover;
+}

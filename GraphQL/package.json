@@ -1,0 +1,22 @@
+{
+  "name": "GraphQL-Basic",
+  "version": "1.0.0",
+  "description": "Tutorial GraphQL Basic For Nodejs",
+  "main": "app.js",
+  "author": "Remy Nguyen",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "json": "json-server --watch src/data.json"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "express": "^4.15.4",
+    "express-graphql": "^0.6.7",
+    "graphql": "^0.10.5",
+    "json-server": "^0.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col m8 offset-m2">
+      <form  [formGroup]="infomationBlog" (ngSubmit)="submitForm(infomationBlog.value)">
+
+        <mz-input-container class="col m12">
+          <i mz-icon mz-input-prefix [icon]="'arrow_forward'">
+          </i>
+          <input type="text" mz-input [label]="'Title'" id="Title" formControlName="title" (keyup)="convertTitle(infomationBlog.get('title').value)">
+        </mz-input-container>
+
+        <mz-input-container class="col m12">
+          <i mz-icon mz-input-prefix [icon]="'arrow_forward'">
+          </i>
+          <input type="text" mz-input [label]="'Slug'" id="Slug" formControlName="slug" value="{{slug}}">
+        </mz-input-container>
+
+
+        <mz-textarea-container class="col m12">
+          <i mz-icon mz-textarea-prefix [icon]="'arrow_forward'"></i>
+          <textarea mz-textarea
+            [label]="'Description'"
+            id="Description"
+            length="120"  formControlName="description"></textarea>
+        </mz-textarea-container>
+
+        <mz-select-container class="col m12">
+          <i mz-icon mz-input-prefix [icon]="'arrow_forward'"></i>
+          <select mz-select [label]="'List Categories'" id="category" multiple formControlName="category">
+              <option *ngFor="let item of categories" [attr.data-icon]="urlImage+'/'+item.images" value="{{item._id}}" class="left circle">{{item.title}}</option>
+          </select>
+        </mz-select-container>
+
+        <div class="col m12 file-field input-field">
+          <div class="btn">
+            <span>Images</span>
+            <input type="file" formControlName="images">
+          </div>
+          <div class="file-path-wrapper">
+            <input type="text" class="file-path">
+          </div>
+        </div>
+
+        <div class="col m12 center-align">
+          <button [disabled]="!infomationBlog.valid" type="submit" class="btn waves-effect waves-light">
+            Create Blogs
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

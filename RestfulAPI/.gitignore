@@ -1,0 +1,34 @@
+/node_modules
+/Seeder
+/assets
+.env
+
+
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/client/dist
+/client/tmp
+/client/out-tsc
+
+# dependencies
+/client/node_modules
+/client/src/assets
+
+# misc
+/client/.sass-cache
+/client/connect.lock
+/client/coverage
+/client/libpeerconnection.log
+/client/npm-debug.log
+/client/testem.log
+/client/typings
+
+# e2e
+/client/e2e/*.js
+/client/e2e/*.map
+
+# System Files
+/client/.DS_Store
+/client/Thumbs.db
